@@ -1,5 +1,6 @@
 
 
+
 public class ShapemonSquare extends Shapemon{
 
 	private String name = "Square";

@@ -1,5 +1,6 @@
 
 
+
 public class ShapemonTriangle extends Shapemon{
 
 	private String name = "Triangle";

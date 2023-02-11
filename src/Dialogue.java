@@ -1,14 +1,17 @@
 
+
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.nio.file.Paths;
 
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import java.nio.file.Path;
 
 public class Dialogue extends JComponent{
 	int shapemonNumber = 0;
@@ -30,37 +33,38 @@ public class Dialogue extends JComponent{
 	private boolean leftArrowPressed = false;
 	private boolean leftArrowReleased = true;
 	private boolean rightArrowPressed = false;
-	private Image background = (new ImageIcon("Background.gif").getImage());
+	Path currentPath = Paths.get(System.getProperty("user.dir"));
+	private Image background = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Background.gif").toString()).getImage());
 	private boolean rightArrowReleased = true;
 	private boolean shiftPressed = false;
 	private boolean inDialogue = true;
 	private boolean inSelectionScreen = false;
-	private Image downArrow = (new ImageIcon("DownArrow.gif").getImage());
-	private Image FinalBoss1 = (new ImageIcon("FinalBoss1.gif").getImage());
-	private Image downArrow2 = (new ImageIcon("DownArrow2.gif").getImage());
-	private Image rightArrow = (new ImageIcon("RightArrow.gif").getImage());
-	private Image leftArrow = (new ImageIcon("LeftArrow.gif").getImage());
-	private Image nyan = (new ImageIcon("NyanCat.gif").getImage());
-	private Image triangle = (new ImageIcon("Triangle.gif").getImage());
-	private Image square = (new ImageIcon("Square.gif").getImage());
-	private Image selectBackground = (new ImageIcon("selectBackground.gif").getImage());
-	private Image pacman = (new ImageIcon("Pacman.gif").getImage());
-	private Image star = (new ImageIcon("Star.gif").getImage());
-	private Image circle = (new ImageIcon("Circle.gif").getImage());
-	private Image pentagon = (new ImageIcon("Pentagon.gif").getImage());
-	private Image hexagon = (new ImageIcon("Hexagon.gif").getImage());
-	private Image octagon = (new ImageIcon("Octagon.gif").getImage());
-	private Image move1 = (new ImageIcon("PlayerBullet1.gif").getImage());
-	private Image move2 = (new ImageIcon("PlayerBullet2.gif").getImage());
-	private Image move3 = (new ImageIcon("PlayerBullet3.gif").getImage());
-	private Image move4 = (new ImageIcon("PlayerBullet4.gif").getImage());
-	private Image move5 = (new ImageIcon("PlayerBullet5.gif").getImage());
-	private Image move6 = (new ImageIcon("PlayerBullet6.gif").getImage());
-	private Image move7 = (new ImageIcon("PlayerBulletNyan.gif").getImage());
-	private Image move8 = (new ImageIcon("PlayerBulletPacman.gif").getImage());
-	private Image move9 = (new ImageIcon("PlayerBullet9.gif").getImage());
-	private Image move10 = (new ImageIcon("PlayerBullet10.gif").getImage());
-	private Image move11 = (new ImageIcon("PlayerBullet11.gif").getImage());
+	private Image downArrow = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "DownArrow.gif").toString()).getImage());
+	private Image FinalBoss1 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "FinalBoss1.gif").toString()).getImage());
+	private Image downArrow2 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "DownArrow2.gif").toString()).getImage());
+	private Image rightArrow = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "RightArrow.gif").toString()).getImage());
+	private Image leftArrow = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "LeftArrow.gif").toString()).getImage());
+	private Image nyan = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "NyanCat.gif").toString()).getImage());
+	private Image triangle = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Triangle.gif").toString()).getImage());
+	private Image square = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Square.gif").toString()).getImage());
+	private Image selectBackground = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "selectBackground.gif").toString()).getImage());
+	private Image pacman = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Pacman.gif").toString()).getImage());
+	private Image star = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Star.gif").toString()).getImage());
+	private Image circle = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Circle.gif").toString()).getImage());
+	private Image pentagon = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Pentagon.gif").toString()).getImage());
+	private Image hexagon = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Hexagon.gif").toString()).getImage());
+	private Image octagon = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "Octagon.gif").toString()).getImage());
+	private Image move1 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet1.gif").toString()).getImage());
+	private Image move2 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet2.gif").toString()).getImage());
+	private Image move3 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet3.gif").toString()).getImage());
+	private Image move4 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet4.gif").toString()).getImage());
+	private Image move5 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet5.gif").toString()).getImage());
+	private Image move6 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet6.gif").toString()).getImage());
+	private Image move7 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBulletNyan.gif").toString()).getImage());
+	private Image move8 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBulletPacman.gif").toString()).getImage());
+	private Image move9 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet9.gif").toString()).getImage());
+	private Image move10 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet10.gif").toString()).getImage());
+	private Image move11 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "PlayerBullet11.gif").toString()).getImage());
 
 	private int x = 20;
 	private int y = 560;
@@ -72,7 +76,7 @@ public class Dialogue extends JComponent{
 	private final int SCREENLENGTH = 720;
 	private String name = "player";
 
-	private Image mainBoss1 = (new ImageIcon("MainBoss1.gif")).getImage();
+	private Image mainBoss1 = (new ImageIcon(Paths.get(currentPath.toString(), "assets",  "MainBoss1.gif").toString())).getImage();
 	
 	public Dialogue() {}
 	                            
@@ -155,7 +159,6 @@ public class Dialogue extends JComponent{
 				g.fillRect(50, 200, 120, 120);
 				g.drawImage(triangle, 60, 210, 100, 100, null);
 				
-				System.out.println(p.getShapemon(1).getName());
 				break;
 				
 			case 2:

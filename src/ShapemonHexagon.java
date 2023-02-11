@@ -1,5 +1,6 @@
 
 
+
 public class ShapemonHexagon extends Shapemon{
 
 	private String name = "Hexagon";

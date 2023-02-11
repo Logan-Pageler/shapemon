@@ -1,3 +1,5 @@
+
+
 /*
  * Author:Logan Pageler
  * Compleation:uhhhhhhhhhhhhhhhhhhh idk 5/1/18?
@@ -9,29 +11,22 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
-
+import java.util.List;
 
 public class SaveFile {
 	static File file;
 	String path;
-	public SaveFile(String pathIfMac, String pathIfElse){
-		
-		//gets os name
-		if(System.getProperty("os.name").substring(0,6).equals("Mac OS")) {
-			path = pathIfMac;
-		} else {
-			path = pathIfElse;
-		}
+
+	public SaveFile(String path) {
+
 		file = new File(path);
-			
-            		
-		
-	
+
 	}
-	//alters text to data
+
+	// alters text to data
 	public void setSave(String save) {
 		try {
-			
+
 			file.createNewFile();
 			PrintWriter writer = new PrintWriter(file);
 			writer.println("DO NOT EDIT FILE");
@@ -41,36 +36,39 @@ public class SaveFile {
 			writer.close();
 		} catch (FileNotFoundException e) {
 			System.out.println("Exception Occurred:");
-	        e.printStackTrace();
+			e.printStackTrace();
 		} catch (IOException e) {
 			System.out.println("Exception Occurred:");
 			e.printStackTrace();
 		}
-		
+
 	}
-	//gets data from save file
-	public String getSave() {
-		
+
+	// gets data from save file
+	public List<String> getSave() {
+
 		try {
-			return String.join(",", Files.readAllLines(file.toPath()));
+			return Files.readAllLines(file.toPath());
 		} catch (IOException e) {
 			System.out.println("Exception Occurred:");
-	        e.printStackTrace();
+			e.printStackTrace();
 		}
-		return "error";
-		
+		return null;
+
 	}
-	//checks if file exsists
+
+	// checks if file exsists
 	public boolean exists() {
 		System.out.println(file.exists());
 		return file.exists();
-		
+
 	}
-	//removes save file
+
+	// removes save file
 	public void deleteSave() {
-		if(file.exists()) {
+		if (file.exists()) {
 			file.delete();
 		}
 	}
-	
+
 }

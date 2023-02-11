@@ -1,5 +1,6 @@
 
 
+
 public class ShapemonPacman extends Shapemon{
 
 	private String name = "PacMan";

@@ -1,5 +1,4 @@
 
-
 public class ShapemonStar extends Shapemon{
 
 	private String name = "Star";
